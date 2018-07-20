@@ -1,6 +1,8 @@
 # Pizza Dress-Up
 A dress-up game where you put toppings on pizza. Made with [p5.js](https://p5js.org/)
 
+[Play on itch.io](https://diefonk.itch.io/pizza-dress-up)
+
 #### Image credits
 * [Background by Beentree](https://commons.wikimedia.org/wiki/File:Fraxinus_excelsior_wood_tangent_section_1_beentree.jpg)
 * [Pizza by petrovhey](https://pixabay.com/en/pizza-food-italy-3000285/)
