@@ -7,26 +7,26 @@ var cameraImage;
 
 function setup() {
 	createCanvas(800, 600);
-	table = loadImage("table.jpg");
-	pizza = new Topping("pizza.png", -100, 0);
-	gameOverImage = loadImage("gameover.png");
-	cameraImage = new Topping("camera.png", 10, 500);
+	table = loadImage("images/table.jpg");
+	pizza = new Topping("images/pizza.png", -100, 0);
+	gameOverImage = loadImage("images/gameover.png");
+	cameraImage = new Topping("images/camera.png", 10, 500);
 	toppings = [];
 	heldTopping = null;
 	addSlice();
-	toppings.push(new Topping("mushroom1.png", 400, 10));
-	toppings.push(new Topping("mushroom2.png", 500, 10));
-	toppings.push(new Topping("mushroom3.png", 600, 10));
-	toppings.push(new Topping("bacon1.png", 450, 100));
-	toppings.push(new Topping("bacon2.png", 400, 150));
-	toppings.push(new Topping("bread.png", 250, 400));
+	toppings.push(new Topping("images/mushroom1.png", 400, 10));
+	toppings.push(new Topping("images/mushroom2.png", 500, 10));
+	toppings.push(new Topping("images/mushroom3.png", 600, 10));
+	toppings.push(new Topping("images/bacon1.png", 450, 100));
+	toppings.push(new Topping("images/bacon2.png", 400, 150));
+	toppings.push(new Topping("images/bread.png", 250, 400));
 	toppings[toppings.length - 1].setSpecial(addBurger);
-	toppings.push(new Topping("cheese.png", 450, 270));
-	toppings.push(new Topping("ham.png", 500, 200));
+	toppings.push(new Topping("images/cheese.png", 450, 270));
+	toppings.push(new Topping("images/ham.png", 500, 200));
 	toppings[toppings.length - 1].setSpecial(addVesuvio);
-	toppings.push(new Topping("lettuce.png", 100, 400));
+	toppings.push(new Topping("images/lettuce.png", 100, 400));
 	toppings[toppings.length - 1].setSpecial(addBurger);
-	toppings.push(new Topping("pineapple.png", 620, 250));
+	toppings.push(new Topping("images/pineapple.png", 620, 250));
 	toppings[toppings.length - 1].setSpecial(gameOver);
 }
 
@@ -92,19 +92,19 @@ function mouseReleased() {
 var pizzaIsEmpty = true;
 function addVesuvio() {
 	if (pizzaIsEmpty) {
-		toppings.push(new Topping("vesuvio.png", -100, 0));
+		toppings.push(new Topping("images/vesuvio.png", -100, 0));
 	}
 }
 
 function addSlice() {
-	toppings.push(new Topping("slice.png", 450, 200));
+	toppings.push(new Topping("images/slice.png", 450, 200));
 	toppings[toppings.length - 1].setSpecial(addSlice);
 }
 
 var hasHalfBurger = false;
 function addBurger() {
 	if (hasHalfBurger) {
-		toppings.push(new Topping("burger.png", 400, 200));
+		toppings.push(new Topping("images/burger.png", 400, 200));
 	} else {
 		hasHalfBurger = true;
 	}
