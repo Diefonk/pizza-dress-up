@@ -31,6 +31,21 @@ function setup() {
 }
 
 function draw() {
+	var toppingIsHovered = false;
+	for (let index = toppings.length - 1; index >= 0; index--) {
+		if (toppings[index].isHovered()) {
+			toppingIsHovered = true;
+			break;
+		}
+	}
+	if (cameraImage.isHovered() && heldTopping === null) {
+		cursor(HAND);
+	} else if (toppingIsHovered || heldTopping !== null) {
+		cursor(MOVE);
+	} else {
+		cursor(ARROW);
+	}
+
 	if (heldTopping !== null && !youLost) {
 		heldTopping.move(mouseX - pmouseX, mouseY - pmouseY);
 	}
