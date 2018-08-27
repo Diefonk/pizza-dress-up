@@ -19,15 +19,18 @@ function setup() {
 	toppings.push(new Topping("images/mushroom3.png", 600, 10));
 	toppings.push(new Topping("images/bacon1.png", 450, 100));
 	toppings.push(new Topping("images/bacon2.png", 400, 150));
-	toppings.push(new Topping("images/bread.png", 250, 400));
+	toppings.push(new Topping("images/tshirt.png", 250, 350));
+	toppings[toppings.length - 1].setSpecial(addClothes);
+	toppings.push(new Topping("images/bread.png", 350, 400));
 	toppings[toppings.length - 1].setSpecial(addBurger);
 	toppings.push(new Topping("images/cheese.png", 450, 270));
 	toppings.push(new Topping("images/ham.png", 500, 200));
 	toppings[toppings.length - 1].setSpecial(addVesuvio);
-	toppings.push(new Topping("images/lettuce.png", 100, 400));
+	toppings.push(new Topping("images/lettuce.png", 50, 370));
 	toppings[toppings.length - 1].setSpecial(addBurger);
 	toppings.push(new Topping("images/pineapple.png", 620, 250));
 	toppings[toppings.length - 1].setSpecial(gameOver);
+	toppings.push(new Topping("images/gummybears.png", 100, 400));
 }
 
 function draw() {
@@ -38,9 +41,9 @@ function draw() {
 			break;
 		}
 	}
-	if (cameraImage.isHovered() && heldTopping === null) {
+	if (cameraImage.isHovered() && heldTopping === null && !youLost) {
 		cursor(HAND);
-	} else if (toppingIsHovered || heldTopping !== null) {
+	} else if ((toppingIsHovered || heldTopping !== null) && !youLost) {
 		cursor(MOVE);
 	} else {
 		cursor(ARROW);
@@ -130,4 +133,10 @@ var lostTimer;
 function gameOver() {
 	youLost = true;
 	lostTimer = 0;
+}
+
+function addClothes() {
+	toppings.push(new Topping("images/bikini.png", 450, 100));
+	toppings.push(new Topping("images/blackdress.png", 450, 100));
+	toppings.push(new Topping("images/reddress.png", 550, 100));
 }
