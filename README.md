@@ -20,6 +20,7 @@ A dress-up game where you put toppings on pizza. Made with [p5.js](https://p5js.
 * [Mushroom by emptypulchritude](https://www.deviantart.com/emptypulchritude/art/Golden-Oyster-Mushroom-445857325)
 * [Mushroom by Nicu Buculei](https://en.wikipedia.org/wiki/File:Mushroom.svg)
 * [Mushroom by Portableho](https://commons.wikimedia.org/wiki/File:香菇mushroom.png)
+* [NES Cartridge by Evan-Amos](https://commons.wikimedia.org/wiki/File:NES-Cartridge.jpg)
 * [Pineapple by MJS93](https://pixabay.com/en/pineapple-fruit-exotic-tropical-1916996/)
 * [Red Dress by Public Domain](https://www.goodfreephotos.com/vector-images/red-dress-with-dark-dots-vector-file.png.php)
 * [Slice by francesco_rollandin](https://openclipart.org/detail/33385/architetto-pizza-4-stagioni)

@@ -31,6 +31,8 @@ function setup() {
 	toppings.push(new Topping("images/pineapple.png", 620, 250));
 	toppings[toppings.length - 1].setSpecial(gameOver);
 	toppings.push(new Topping("images/gummybears.png", 100, 400));
+	toppings.push(new Topping("images/nescartridge.png", 400, 550));
+	toppings[toppings.length - 1].setSpecial(pizzaGame);
 }
 
 function draw() {
@@ -139,4 +141,8 @@ function addClothes() {
 	toppings.push(new Topping("images/bikini.png", 450, 100));
 	toppings.push(new Topping("images/blackdress.png", 450, 100));
 	toppings.push(new Topping("images/reddress.png", 550, 100));
+}
+
+function pizzaGame() {
+	window.open("https://pizzagame.party/", "_blank");
 }
